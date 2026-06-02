@@ -9,7 +9,7 @@
 
 /atom/movable/atom_shadow
 	name = "shadow"
-	icon = 'shadow.dmi'
+	icon = 'code/modules/wod13/icons/shadow.dmi'
 	icon_state = "shadow"
 	plane = ATOMS_FOV_SHADOWS_PLANE
 	mouse_opacity = 1
@@ -36,7 +36,7 @@
 /atom/movable/screen/wall_fov/plane0/New(client/user)
 	. = ..()
 	filters += filter(type = "layer", render_source = ATOMS_FOV_SHADOWS_RENDER_TARGET, flags = FILTER_UNDERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "1"), size = 1, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "1"), size = 1, flags = FILTER_OVERLAY)
 	filters += filter(type = "alpha", render_source = ATOMS_FOV_SHADOWS_RENDER_TARGET, flags = MASK_INVERSE)
 
 /atom/movable/screen/wall_fov/plane1
@@ -48,15 +48,15 @@
 /atom/movable/screen/wall_fov/plane1/New(client/user)
 	. = ..()
 	filters += filter(type = "layer", render_source = WALLS_FOV_PLANE_0_RENDER_TARGET, flags = FILTER_UNDERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "1"), size = 1, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "2"), size = 2, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "3"), size = 4, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "4"), size = 8, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "5"), size = 16, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "6"), size = 32, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "7"), size = 64, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "8"), size = 128, flags = FILTER_OVERLAY)
-	filters += filter(type = "displace", x = 64, icon = icon('walls_fov.dmi', "9"), size = 128, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "1"), size = 1, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "2"), size = 2, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "3"), size = 4, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "4"), size = 8, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "5"), size = 16, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "6"), size = 32, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "7"), size = 64, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "8"), size = 128, flags = FILTER_OVERLAY)
+	filters += filter(type = "displace", x = 64, icon = icon('code/modules/wod13/icons/walls_fov.dmi', "9"), size = 128, flags = FILTER_OVERLAY)
 
 	filters += filter(type = "drop_shadow", size = 12, color = "#000000")
 	filters += filter(type = "blur", size = 4)
