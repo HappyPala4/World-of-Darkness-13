@@ -556,12 +556,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["chi_types"], chi_types)
 	READ_FILE(S["chi_levels"], chi_levels)
 	READ_FILE(S["equipped_gear"], equipped_gear)
+	var/loadout_item_limit = 0
+	if(config)
+		loadout_item_limit = CONFIG_GET(number/max_loadout_items) + Finance
 	if(!equipped_gear)
 		equipped_gear = list()
-	else if(config && (length(equipped_gear) > CONFIG_GET(number/max_loadout_items)))
-		to_chat(parent, span_userdanger("Loadout maximum items exceeded in loaded slot, Your loadout has been cleared! You had [length(equipped_gear)]/[CONFIG_GET(number/max_loadout_items)] equipped items!"))
+	else if(config && (length(equipped_gear) > loadout_item_limit))
+		to_chat(parent, span_userdanger("Loadout maximum items exceeded in loaded slot, Your loadout has been cleared! You had [length(equipped_gear)]/[loadout_item_limit] equipped items!"))
 		equipped_gear = list()
-	else
+	else if(SSloadout?.gear_datums && length(SSloadout.gear_datums))
 		equipped_gear = sanitize_each_inlist(equipped_gear, SSloadout.gear_datums)
 
 	if(!CONFIG_GET(flag/join_with_mutant_humans))
